@@ -1,0 +1,101 @@
+titulo,autor,tema,score,posicao,perfil,usuario
+The Heroin Diaries: A Year in the Life of a Shattered Rock Star,"Nikki Sixx, Ian Gittins",Nonfiction,0.248,1,Rock/Metal,usuario_01
+Creatura,Paolo Eleuteri Serpieri,Comics,0.2282,2,Rock/Metal,usuario_01
+Death Punch'd: Surviving Five Finger Death Punch's Metal Mayhem,Jeremy Spencer (Goodreads Author),Music,0.2106,3,Rock/Metal,usuario_01
+Memoirs Found in a Bathtub,"Stanisław Lem, Christine Rose (translator), Michael Kandel (Translator)",Science Fiction,0.1858,4,Rock/Metal,usuario_01
+Try Me,Olivia Cunning (Goodreads Author),Romance,0.1663,5,Rock/Metal,usuario_01
+Dee Snider's Teenage Survival Guide,"Dee Snider, Philip Bashe",Self Help,0.1654,6,Rock/Metal,usuario_01
+Postcards from a Rock and Roll Tour,Gordy Marshall,Music,0.1647,7,Rock/Metal,usuario_01
+Stand in the Wind,Jean Little,Fiction,0.1594,8,Rock/Metal,usuario_01
+The Complete Book of Swords,Fred Saberhagen,Fantasy,0.1581,9,Rock/Metal,usuario_01
+Spellsinger,Alan Dean Foster,Fantasy,0.1555,10,Rock/Metal,usuario_01
+Humanae Vitae: Of Human Life,Pope Paul VI,Catholic,0.24,1,Pop/Dance,usuario_02
+The Place Within: The Poetry of Pope John Paul II,Pope John Paul II,Poetry,0.2252,2,Pop/Dance,usuario_02
+Toy Story,Walt Disney Company,Childrens,0.22,3,Pop/Dance,usuario_02
+Bedsit Disco Queen: How I Grew Up and Tried to Be a Pop Star,Tracey Thorn,Music,0.212,4,Pop/Dance,usuario_02
+"The Wicked + The Divine, Vol. 1: The Faust Act","Kieron Gillen, Jamie McKelvie (Illustrations), Matt Wilson (Colorist), Clayton Cowles",Graphic Novels,0.1995,5,Pop/Dance,usuario_02
+The Shock of the New,Robert Hughes,Art,0.1981,6,Pop/Dance,usuario_02
+Stand and Deliver: The Autobiography,Adam Ant,Music,0.1967,7,Pop/Dance,usuario_02
+Harry Potter: A Pop-Up Book: Based on the Film Phenomenon,"Andrew Williamson (Illustrations), Andrew Williamson (Illustrator)",Fantasy,0.1956,8,Pop/Dance,usuario_02
+Revenge of the Wannabes,Lisi Harrison (Goodreads Author),Young Adult,0.1905,9,Pop/Dance,usuario_02
+How To Build Your Own Spaceship: The Science Of Mass Space Travel,Piers Bizony,Science,0.1807,10,Pop/Dance,usuario_02
+Can't Stop Won't Stop: A History of the Hip-Hop Generation,"Jeff Chang (Goodreads Author), D.J. Kool Herc",Music,0.2635,1,Hip-Hop/Rap,usuario_03
+Terrorscape,Nenia Campbell (Goodreads Author),Dark,0.1943,2,Hip-Hop/Rap,usuario_03
+The Man Who Came to Dinner,"Moss Hart, George S. Kaufman",Plays,0.1898,3,Hip-Hop/Rap,usuario_03
+On the Come Up,Angie Thomas (Goodreads Author),Young Adult,0.175,4,Hip-Hop/Rap,usuario_03
+"The Art of Mixing: A Visual Guide to Recording, Engineering, and Production",David Gibson,Music,0.1672,5,Hip-Hop/Rap,usuario_03
+The Tao of Wu,The RZA,Music,0.1632,6,Hip-Hop/Rap,usuario_03
+The 50th Law,"50 Cent, Robert Greene (Goodreads Author)",Business,0.161,7,Hip-Hop/Rap,usuario_03
+The Groovy Greeks,"Terry Deary, Martin Brown (Illustrator)",Nonfiction,0.1605,8,Hip-Hop/Rap,usuario_03
+Raptor Red,Robert T. Bakker,Fiction,0.1585,9,Hip-Hop/Rap,usuario_03
+Alfred Hitchcock Presents: More Stories Not for the Nervous,"Alfred Hitchcock (Editor), Ellis Peters, Allan Ullman, Margaret St. Clair, Miriam Allen deFord, Jack Ritchie, Lucille Fletcher, Robert Arthur, more…",Mystery,0.1495,10,Hip-Hop/Rap,usuario_03
+Dead Girls Don't Write Letters,Gail Giles (Goodreads Author),Young Adult,0.2349,1,Jazz/Blues,usuario_04
+Jessica The Jazz Fairy,"Daisy Meadows, Georgie Ripper (Illustrator)",Childrens,0.2262,2,Jazz/Blues,usuario_04
+I Hunt Killers,Barry Lyga (Goodreads Author),Young Adult,0.1958,3,Jazz/Blues,usuario_04
+The Kill Club,Wendy Heard (Goodreads Author),Thriller,0.1913,4,Jazz/Blues,usuario_04
+The History of Jazz,Ted Gioia,Music,0.187,5,Jazz/Blues,usuario_04
+Flappers and Philosophers,F. Scott Fitzgerald,Classics,0.1816,6,Jazz/Blues,usuario_04
+Blood of My Blood,Barry Lyga (Goodreads Author),Young Adult,0.1809,7,Jazz/Blues,usuario_04
+Trans/Portraits: Voices from Transgender Communities,Jackson Wright Shultz (Goodreads Author),Nonfiction,0.1701,8,Jazz/Blues,usuario_04
+Blue Like Jazz: Nonreligious Thoughts on Christian Spirituality,Donald Miller,Nonfiction,0.1694,9,Jazz/Blues,usuario_04
+Being Jazz: My Life as a (Transgender) Teen,Jazz Jennings,Nonfiction,0.1636,10,Jazz/Blues,usuario_04
+Freefall,"Roderick Gordon (Goodreads Author), Brian Williams",Fantasy,0.2802,1,Eletrônico/Ambient,usuario_05
+The Dreaming Void,Peter F. Hamilton (Goodreads Author),Science Fiction,0.1944,2,Eletrônico/Ambient,usuario_05
+Tetrarch: A Tale Of The Three Worlds,Ian Irvine (Goodreads Author),Fantasy,0.1937,3,Eletrônico/Ambient,usuario_05
+The Temporal Void,Peter F. Hamilton (Goodreads Author),Science Fiction,0.1673,4,Eletrônico/Ambient,usuario_05
+As She Climbed Across the Table,Jonathan Lethem,Fiction,0.1525,5,Eletrônico/Ambient,usuario_05
+Practical Electronics for Inventors,Paul Scherz,Reference,0.1518,6,Eletrônico/Ambient,usuario_05
+A Knight of the Word,Terry Brooks (Goodreads Author),Fantasy,0.1503,7,Eletrônico/Ambient,usuario_05
+The Evolutionary Void,Peter F. Hamilton (Goodreads Author),Science Fiction,0.1487,8,Eletrônico/Ambient,usuario_05
+Amber Brown Is Not a Crayon,"Paula Danziger, Tony Ross (Illustrator)",Childrens,0.1413,9,Eletrônico/Ambient,usuario_05
+Angel Fire East,Terry Brooks (Goodreads Author),Fantasy,0.1385,10,Eletrônico/Ambient,usuario_05
+Indigo Blue,Cathy Cassidy (Goodreads Author),Childrens,0.2516,1,Folk/Indie,usuario_06
+Hexed,Michelle Krys (Goodreads Author),Young Adult,0.2052,2,Folk/Indie,usuario_06
+Charmed,Michelle Krys (Goodreads Author),Fantasy,0.191,3,Folk/Indie,usuario_06
+The Rotten Romans,"Terry Deary, Martin Brown (Illustrator)",History,0.1891,4,Folk/Indie,usuario_06
+The Moorchild,Eloise Jarvis McGraw,Fantasy,0.1882,5,Folk/Indie,usuario_06
+Abiyoyo,Pete Seeger,Picture Books,0.1784,6,Folk/Indie,usuario_06
+Reached,Ally Condie (Goodreads Author),Young Adult,0.1783,7,Folk/Indie,usuario_06
+Willa of the Wood,Robert Beatty (Goodreads Author),Fantasy,0.177,8,Folk/Indie,usuario_06
+A Girl of the Limberlost,Gene Stratton-Porter,Classics,0.1746,9,Folk/Indie,usuario_06
+Woody Guthrie,Joe Klein,Music,0.1735,10,Folk/Indie,usuario_06
+A Night at the Opera,Felicity Brandon (Goodreads Author),BDSM,0.1919,1,Clássica,usuario_07
+Vince's Life: The Wedding,Vince O. Teves,Romance,0.1409,2,Clássica,usuario_07
+Sabotaged,Margaret Peterson Haddix,Science Fiction,0.1407,3,Clássica,usuario_07
+Gertrude,"Hermann Hesse, Hilda Rosner (Translator)",Fiction,0.1356,4,Clássica,usuario_07
+La joya de Alejandro Magno,"Isaac Palmiola, Lola Rodríguez (Illustrator)",Spanish Literature,0.1348,5,Clássica,usuario_07
+Vince's Life The Next Chapter: Getting Over Andrea,Vince O. Teves,Romance,0.1273,6,Clássica,usuario_07
+Hidden Talents,David Lubar,Young Adult,0.1225,7,Clássica,usuario_07
+The Devil Wears Prada,Lauren Weisberger,Chick Lit,0.1215,8,Clássica,usuario_07
+"Martin Guitar Masterpieces: A Showcase Of Artists' Editions, Limited Editions, And Custom Guitars",Dick Boak,Music,0.1212,9,Clássica,usuario_07
+Illuminations of the Heart,Joyce DiPastena (Goodreads Author),Romance,0.1182,10,Clássica,usuario_07
+Tinisima: Novela,Elena Poniatowska,Fiction,0.2662,1,Sertanejo/MPB,usuario_08
+A Paixão das Almas,Ronlyn Domingue (Goodreads Author),Fiction,0.2453,2,Sertanejo/MPB,usuario_08
+Abel Sánchez,Miguel de Unamuno,Spanish Literature,0.214,3,Sertanejo/MPB,usuario_08
+Tudo São Histórias de Amor,Dulce Maria Cardoso,Short Stories,0.2113,4,Sertanejo/MPB,usuario_08
+Revelación,Anissa B. Damom (Goodreads Author),Fantasy,0.2091,5,Sertanejo/MPB,usuario_08
+Todas las almas,Javier Marías,Fiction,0.1983,6,Sertanejo/MPB,usuario_08
+Catapult Soul,Brian Celio,Counter Culture,0.1882,7,Sertanejo/MPB,usuario_08
+The Japanese Lover,"Isabel Allende (Goodreads Author), Nick Caistor (Translator), Amanda Hopkinson (Translator)",Historical Fiction,0.1749,8,Sertanejo/MPB,usuario_08
+El caballero de la armadura oxidada,"Robert Fisher, Verónica d'Ornellas Radziwill (Translator)",Fantasy,0.1707,9,Sertanejo/MPB,usuario_08
+Adrian's Lost Chapter,Richelle Mead (Goodreads Author),Vampires,0.1699,10,Sertanejo/MPB,usuario_08
+Don't Want to Miss a Thing,Jill Mansell,Chick Lit,0.2367,1,R&B/Soul,usuario_09
+Avenger,Frederick Forsyth,Fiction,0.2367,2,R&B/Soul,usuario_09
+Dexter in the Dark,Jeff Lindsay (Goodreads Author),Fiction,0.2166,3,R&B/Soul,usuario_09
+Darkly Dreaming Dexter,Jeff Lindsay (Goodreads Author),Fiction,0.2154,4,R&B/Soul,usuario_09
+Dearly Devoted Dexter,Jeff Lindsay (Goodreads Author),Fiction,0.2137,5,R&B/Soul,usuario_09
+Vitamin D: New Perspectives in Drawing,"Emma Dexter (Creator), Johanna Burton, Jeanine Herman",Art,0.2098,6,R&B/Soul,usuario_09
+"Chicken Soup for the Christian Soul II: Stories of Faith, Hope and Healing (Chicken Soup for the Soul)","Jack Canfield, Mark Victor Hansen, LeAnn Thieman",Inspirational,0.1973,7,R&B/Soul,usuario_09
+One Day,David Nicholls,Fiction,0.196,8,R&B/Soul,usuario_09
+Not Even Bones,Rebecca Schaeffer (Goodreads Author),Fantasy,0.1724,9,R&B/Soul,usuario_09
+The Darkangel,Meredith Ann Pierce,Young Adult,0.1695,10,R&B/Soul,usuario_09
+Like Hell,Ben Weasel,Fiction,0.2395,1,Punk/Alternativo,usuario_10
+I Wanna Be Your Joey Ramone,Stephanie Kuehnert (Goodreads Author),Young Adult,0.2395,2,Punk/Alternativo,usuario_10
+The End of the World,Derek Landy,Fantasy,0.1961,3,Punk/Alternativo,usuario_10
+"Heaven!!, Volume 1",Shizuru Seino,Manga,0.1948,4,Punk/Alternativo,usuario_10
+"Clothes, Clothes, Clothes. Music, Music, Music. Boys, Boys, Boys",Viv Albertine,Music,0.1943,5,Punk/Alternativo,usuario_10
+Reality Isn't What It Used to Be,Walter Truett Anderson,Philosophy,0.1916,6,Punk/Alternativo,usuario_10
+Please Kill Me: The Uncensored Oral History of Punk,"Legs McNeil, Gillian McCain",Music,0.1875,7,Punk/Alternativo,usuario_10
+Blood and Guts in High School,Kathy Acker,Fiction,0.1726,8,Punk/Alternativo,usuario_10
+"England's Dreaming: Anarchy, Sex Pistols, Punk Rock, and Beyond",Jon Savage,Music,0.1691,9,Punk/Alternativo,usuario_10
+Lexicon Devil: The Fast Times and Short Life of Darby Crash and The Germs,"Brendan Mullen (Editor), Don Bolles, Adam Parfrey",Music,0.1654,10,Punk/Alternativo,usuario_10
