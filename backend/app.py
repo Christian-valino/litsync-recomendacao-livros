@@ -2,10 +2,11 @@
 app.py — API Flask do LitSync.
 
 Rotas:
-    GET  /stats                        → Estatísticas gerais
-    GET  /perfis                       → Lista de perfis musicais
-    GET  /recomendar/<usuario>?top=10  → Recomendações por perfil
-    POST /buscar                       → Recomendações por texto livre
+    GET  /                          → Health check / Status simples
+    GET  /stats                     → Estatísticas gerais
+    GET  /perfis                    → Lista de perfis musicais
+    GET  /recomendar/<usuario>?top=10 → Recomendações por perfil
+    POST /buscar                    → Recomendações por texto livre
 
 Uso:
     cd backend
@@ -28,7 +29,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # ── Inicialização ──────────────────────────────────────────
 app = Flask(__name__)
-CORS(app)  # Permite chamadas do frontend (localhost:8080 → localhost:5000)
+CORS(app)  # Libera requisições do frontend (Vercel ou local)
 
 artefatos    = carregar_tudo()
 df_livros    = artefatos['df_livros']
@@ -64,6 +65,15 @@ def _top_n(vetor_query, top_n: int) -> tuple:
 
 
 # ── Rotas ──────────────────────────────────────────────────
+
+@app.route('/', methods=['GET'])
+def index():
+    """Rota raiz para confirmação de status no Render."""
+    return jsonify({
+        'status': 'online',
+        'mensagem': 'API LitSync rodando com sucesso!'
+    }), 200
+
 
 @app.route('/stats', methods=['GET'])
 def stats():
