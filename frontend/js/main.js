@@ -8,7 +8,7 @@
  *  - Buscar e renderizar recomendações por texto livre
  */
 
-const API = 'http://localhost:5000';
+const API = 'https://litsync-recomendacao-livros.onrender.com';
 
 const EMOJIS = {
   'Rock/Metal':         '🎸',
