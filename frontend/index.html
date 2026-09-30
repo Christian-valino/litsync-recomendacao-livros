@@ -3,106 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LitSync — Recomendação de Livros por Perfil Musical</title>
+  <title>LitSync — Livros que combinam com a sua música</title>
+  <meta name="description" content="Descreva o que você ouve e receba recomendações de livros com afinidade temática.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── HEADER ──────────────────────────────────────────── -->
-<header>
-  <div class="header-tag">Projeto PLN · Bruno Silva &amp; Christian Valino</div>
-  <h1>Lit<em>Sync</em></h1>
-  <p class="header-sub">
-    Sistema de recomendação de livros baseado em perfil musical.
-    TF-IDF + Similaridade Cosseno sobre catálogo de 45k+ títulos.
-  </p>
-  <div class="badges">
-    <div class="badge on">TF-IDF</div>
-    <div class="badge on">Cosine Similarity</div>
-    <div class="badge">NLTK</div>
-    <div class="badge">scikit-learn</div>
-    <div class="badge">Flask API</div>
-    <div class="badge">Goodreads Dataset</div>
-  </div>
-  <div class="api-status">
-    <div class="dot" id="statusDot"></div>
-    <span id="statusText">Verificando API...</span>
+<!-- ── TOPO ────────────────────────────────────────────── -->
+<header class="topbar">
+  <a class="logo" href="./">Lit<em>Sync</em></a>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" role="tab" data-view="descobrir" aria-selected="true">Descobrir</button>
+    <button class="tab" role="tab" data-view="estante" aria-selected="false">
+      Minha estante <span class="tab-count" id="shelfCount">0</span>
+    </button>
+  </nav>
+
+  <div class="topbar-right">
+    <div class="api-status" id="apiStatus" title="Status da API">
+      <span class="dot"></span><span class="api-status-text">Conectando…</span>
+    </div>
+    <button class="icon-btn" id="btnTheme" aria-label="Alternar tema claro/escuro">◐</button>
   </div>
 </header>
 
-<!-- ── LAYOUT ──────────────────────────────────────────── -->
-<div class="layout">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-title">Perfis musicais</div>
-    <div id="userList">
-      <div class="state-msg">carregando...</div>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <!-- Stats -->
-    <div class="stats-row">
-      <div class="stat-cell">
-        <div class="stat-num" id="statLivros">—</div>
-        <div class="stat-label">Livros</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" id="statPerfis">—</div>
-        <div class="stat-label">Perfis</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num">10k</div>
-        <div class="stat-label">Features TF-IDF</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num">100</div>
-        <div class="stat-label">Recomendações</div>
-      </div>
-    </div>
-
-    <!-- Busca livre -->
-    <div class="search-box">
-      <div class="search-label">🔍 Busca por texto livre</div>
-      <div class="search-row">
-        <textarea
-          id="searchInput"
-          placeholder="Descreva seu gosto musical... ex: Gosto de músicas intensas com guitarras pesadas como Metallica e Tool.">
-        </textarea>
-        <button class="btn-search" id="btnSearch" onclick="buscarLivre()">
-          Recomendar
-        </button>
-      </div>
-    </div>
-
-    <!-- Error -->
-    <div id="errorBox" class="error-msg"></div>
-
-    <!-- Profile hero -->
-    <div class="profile-hero" id="profileHero" data-emoji="">
-      <div class="profile-tag" id="profileTag">Selecione um perfil</div>
-      <div class="profile-genre" id="profileGenre">—</div>
-      <div class="profile-artists" id="profileArtists"></div>
-      <div class="audio-bars" id="audioBars"></div>
-    </div>
-
-    <!-- Section header -->
-    <div class="section-header" id="sectionHeader">
-      <div class="section-title" id="sectionTitle">Livros recomendados</div>
-      <div class="section-line"></div>
-      <div class="section-count" id="sectionCount">TOP 10</div>
-    </div>
-
-    <!-- Books grid -->
-    <div class="books-grid" id="booksGrid">
-      <div class="state-msg">Selecione um perfil ou faça uma busca</div>
-    </div>
-
-  </main>
+<!-- Aviso de servidor acordando / offline -->
+<div class="banner" id="banner" hidden>
+  <span class="banner-text" id="bannerText"></span>
+  <button class="banner-btn" id="bannerRetry" hidden>Tentar de novo</button>
 </div>
+
+<main>
+
+  <!-- ── DESCOBRIR ─────────────────────────────────────── -->
+  <section id="view-descobrir" class="view">
+
+    <div class="hero">
+      <h1>Livros que combinam com a <em>sua música</em></h1>
+      <p class="hero-sub">
+        Conte o que você gosta de ouvir — gêneros, artistas, o clima das músicas —
+        e a gente encontra livros com afinidade temática.
+      </p>
+
+      <form class="search" id="searchForm">
+        <textarea id="searchInput" rows="2" maxlength="500"
+          placeholder="Ex.: músicas intensas, guitarras pesadas, letras sobre rebeldia e escuridão…"></textarea>
+        <div class="search-actions">
+          <span class="search-hint">Enter para buscar · Shift+Enter quebra linha</span>
+          <button type="submit" class="btn-primary" id="btnSearch">Recomendar livros</button>
+        </div>
+      </form>
+
+      <div class="examples">
+        <span class="examples-label">Experimente:</span>
+        <button class="chip" data-example="Heavy guitars, anger, rebellion and dark themes">🤘 Rock pesado</button>
+        <button class="chip" data-example="Melancholic piano, rainy nights, loneliness and memories">🌧️ Melancólico</button>
+        <button class="chip" data-example="Love songs, romance, heartbreak and passion">💔 Românticas</button>
+        <button class="chip" data-example="Epic orchestral soundtrack, battles, magic and adventure">🐉 Épico</button>
+        <button class="chip" data-example="Hip hop, street life, city, struggle and ambition">🎤 Rap</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head">
+        <h2>Ou comece por um perfil musical</h2>
+        <p>Dez perfis prontos, cada um com um gênero e seus artistas favoritos.</p>
+      </div>
+      <div class="profiles" id="profileList">
+        <div class="profile-card skeleton"></div>
+        <div class="profile-card skeleton"></div>
+        <div class="profile-card skeleton"></div>
+        <div class="profile-card skeleton"></div>
+      </div>
+    </div>
+
+    <div class="block results" id="results" hidden>
+      <div class="results-head">
+        <div>
+          <div class="results-kicker" id="resultsKicker"></div>
+          <h2 id="resultsTitle"></h2>
+          <p class="results-sub" id="resultsSub"></p>
+        </div>
+        <div class="audio-bars" id="audioBars"></div>
+      </div>
+
+      <div class="filters" id="filters"></div>
+
+      <div class="books" id="booksGrid"></div>
+
+      <div class="results-foot">
+        <button class="btn-ghost" id="btnMore" hidden>Ver mais recomendações</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ESTANTE ───────────────────────────────────────── -->
+  <section id="view-estante" class="view" hidden>
+    <div class="block">
+      <div class="block-head">
+        <h2>Minha estante</h2>
+        <p>Livros que você salvou. Ficam guardados neste navegador.</p>
+      </div>
+      <div class="books" id="shelfGrid"></div>
+      <div class="empty" id="shelfEmpty">
+        <div class="empty-icon">📖</div>
+        <p>Sua estante está vazia.</p>
+        <p class="muted">Toque em ♡ num livro recomendado para guardar aqui.</p>
+        <button class="btn-ghost" data-goto="descobrir">Descobrir livros</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── RODAPÉ ──────────────────────────────────────────── -->
+<footer>
+  <details class="how">
+    <summary>Como funciona?</summary>
+    <div class="how-body">
+      <ol class="pipeline">
+        <li><strong>Seu texto</strong><span>descrição do gosto musical</span></li>
+        <li><strong>Pré-processamento</strong><span>limpeza, stopwords, stemming</span></li>
+        <li><strong>TF-IDF</strong><span>10 mil termos, bigramas</span></li>
+        <li><strong>Similaridade cosseno</strong><span>contra cada sinopse</span></li>
+        <li><strong>Top livros</strong><span>maior afinidade primeiro</span></li>
+      </ol>
+      <div class="how-stats">
+        <div><strong id="statLivros">—</strong><span>livros no catálogo</span></div>
+        <div><strong id="statPerfis">—</strong><span>perfis musicais</span></div>
+        <div><strong id="statVocab">—</strong><span>termos no vocabulário</span></div>
+      </div>
+      <p class="muted">
+        A afinidade mostra o quanto a sinopse do livro compartilha termos com o seu texto.
+        As sinopses do catálogo são em sua maioria em inglês, então descrições em inglês
+        tendem a dar resultados melhores.
+      </p>
+    </div>
+  </details>
+  <p class="credits">Projeto de PLN · Bruno Silva &amp; Christian Valino · Dataset Goodreads</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/main.js"></script>
 </body>
